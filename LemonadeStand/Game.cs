@@ -1,0 +1,39 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace LemonadeStand
+{
+    public class Game
+    {
+        //member variables
+        public Player Player;
+        public UserInterface UserInterface;
+        public Store Store;
+        public Day Day;
+
+        //constructor
+        public Game()
+        {
+
+            
+        }
+
+        
+        //member methods
+        public void GameSetup()//Prompts the game instructions and objective, Prompts Play Game? (y/n), Prompts how long you would like to play for? (7 days, 14 days, 30 days)
+        {
+
+        }
+        public void RunTheMatrix()//Starts simulation, Work from 9-5, generate customers, consume lemonade cups, make lemonade batches, consume ingredients.
+        {
+
+        }
+        public void GoToStore()
+        {
+
+        }
+
+    }
+}
