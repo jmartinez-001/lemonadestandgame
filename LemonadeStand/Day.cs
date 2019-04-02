@@ -9,22 +9,8 @@ namespace LemonadeStand
     {
         //member variables
         public int DailyProfitLoss;
-
-        public Weather Weather
-        {
-            get => default(Weather);
-            set
-            {
-            }
-        }
-
-        public Customer Customer
-        {
-            get => default(Customer);
-            set
-            {
-            }
-        }
+        public Weather Weather;
+        public Customer Customer;
 
         //constructor
 

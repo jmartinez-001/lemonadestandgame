@@ -11,9 +11,8 @@ namespace LemonadeStand
         public double WeatherDisposition;
         public double PriceDisposition;
         public int Thirst;
-    
-
-        
+        Random rnd = new Random();
+               
         //constructor
         public Customer()
         {

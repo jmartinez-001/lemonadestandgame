@@ -5,33 +5,38 @@ using System.Text;
 
 namespace LemonadeStand
 {
-    public class UserInterface
+    static class UserInterface
     {
         //member variables
-        private int MainDashBoard;
-        private int StoreDashBoard;
-        private int WorkDashBoard;
+     
 
         //constructor
-
+        
 
 
         //member methods
-        public void DisplayStore()
+        public static void WelcomeMessage()
+        {
+            Console.WriteLine("Welcome... to Lemonade Stand Park!(Cue Jurassic Park Music). Your Mission, should you choose to accept it, will test your business savy and decision making skills. Your objective is to make a profit in a specified length of time. You will have all the tools you need at your disposal. Lie, cheat or steal; but as always, should any of your IM Force be caught or killed, the Secretary will disavow any knowledge of your actions. This computer will self-destruct in ten seconds. Good luck.");
+            Console.ReadLine();
+        }
+        public static void DisplayStore()
+        {
+            Console.WriteLine("This is the store, you can purchase ")
+
+        }
+        public static void DisplayForecast()
         {
 
         }
-        public void DisplayForecast()
+        public static void GoToWork()
         {
 
         }
-        public void GoToWork()
+        public static void DisplayInventory()
         {
 
         }
-        public void DisplayInventory()
-        {
-
-        }
+        
     }
 }

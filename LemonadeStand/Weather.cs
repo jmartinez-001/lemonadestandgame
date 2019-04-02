@@ -10,13 +10,15 @@ namespace LemonadeStand
         //member variables
         public int ActualWeather;
         public int[] WeekForecast;
+        Random rnd = new Random();
 
+
+        //constructor
         public Weather()
         {
 
 
         }
-        //constructor
 
 
         //member methods

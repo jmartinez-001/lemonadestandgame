@@ -9,9 +9,8 @@ namespace LemonadeStand
     {
         //member variables
         public Player Player;
-        public UserInterface UserInterface;
         public Store Store;
-        public Day Day;
+        public List<Day> Day;
 
         //constructor
         public Game()
@@ -24,6 +23,8 @@ namespace LemonadeStand
         //member methods
         public void GameSetup()//Prompts the game instructions and objective, Prompts Play Game? (y/n), Prompts how long you would like to play for? (7 days, 14 days, 30 days)
         {
+            UserInterface.WelcomeMessage();
+
 
         }
         public void RunTheMatrix()//Starts simulation, Work from 9-5, generate customers, consume lemonade cups, make lemonade batches, consume ingredients.
