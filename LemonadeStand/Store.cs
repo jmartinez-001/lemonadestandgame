@@ -20,14 +20,19 @@ namespace LemonadeStand
         //constructor
         public Store()
         {
+            PricePerCup = .05;
+            PricePerLemon = .10;
+            PricePerSugarCup = .10;
+            PricePerCube = .01;
+           
             
         }
 
         //member methods
         public void DisplayProducts()
         {
+            Console.WriteLine($"\t Cups / 10 pack : {(PricePerCup * 10).ToString("C")} \n\t Lemons / 4 pack : {(PricePerLemon * 4).ToString("C")} \n\t Sugar / 4 cups : {(PricePerSugarCup * 4).ToString("C")} \n\t Ice cubes / bag of 50 : {(PricePerCube * 50).ToString("C")} \n");
 
         }
-        
     }
 }

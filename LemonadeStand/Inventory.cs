@@ -23,7 +23,12 @@ namespace LemonadeStand
         }
 
         //member methods 
-       
+       public void DisplayCurrentInventory()
+        {
+           
+            Console.WriteLine($"\t Cups : {Cups} \n\t Lemons : {Lemons} \n\t Sugar : {Sugar} \n\t Ice cubes : {Ice} \n");
+
+        }
 
     }
 }

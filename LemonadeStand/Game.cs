@@ -15,7 +15,8 @@ namespace LemonadeStand
         //constructor
         public Game()
         {
-
+            Store = new Store();
+            Player = new Player();
             
         }
 
@@ -31,8 +32,18 @@ namespace LemonadeStand
         {
 
         }
-        public void GoToStore()
+        public void GoToStore()   
         {
+
+            Console.Clear();
+            UserInterface.DisplayStore();
+            Store.DisplayProducts();
+            UserInterface.DisplayInventory();
+            Player.Inventory.DisplayCurrentInventory();
+            Player.CheckCashFlow();
+            Console.ReadLine();
+            GoToStore();
+            
 
         }
 

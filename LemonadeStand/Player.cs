@@ -8,7 +8,27 @@ namespace LemonadeStand
     public class Player
     {
         //member variables (Has A)
-        public double Money;
+        private double money;
+        public double Money
+        {
+            get => money;
+            set
+            {
+                if (value <= 0)
+                {
+                    money = 0;
+                }
+                else if (money >= 100)
+                {
+                    money = 100;
+                }
+                else
+                {
+                    money = value;
+                }
+
+            }
+        }
         public Recipe Recipe;
         public Inventory Inventory;
 
@@ -17,11 +37,11 @@ namespace LemonadeStand
         //constructor (Build This Thing)
         public Player()
         {
-            Money = 20.00;
+            money = 20.00;
+            Inventory = new Inventory();
             
-        }
-
-        
+            
+        }     
        
 
         //member methods (Can Do)
@@ -29,15 +49,17 @@ namespace LemonadeStand
         {
             
         }
-
         public void SetRecipe()
-        {
-            Console.WriteLine($"What would you like to change:" );
+        {            
             
         }
-
         public void ConsumeInventory()
         {
+
+        }
+        public void CheckCashFlow()
+        {
+            Console.WriteLine($"\t Business Net Cash Flow:\n\t {Money.ToString("C")}\n");
 
         }
     }
