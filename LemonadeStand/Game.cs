@@ -9,14 +9,17 @@ namespace LemonadeStand
     {
         //member variables
         public Player player;
-        public Store Store;
-        public List<Day> Day;
+        public Store store;
+        public List<Day> Days;
+        public Day day;
 
         //constructor
         public Game()
         {
-            Store = new Store();
+            store = new Store();
             player = new Player();
+            day = new Day();
+
             
         }
 
@@ -50,11 +53,12 @@ namespace LemonadeStand
 
             Console.Clear();
             UserInterface.DisplayStore();
-            Store.DisplayProducts();
+            store.DisplayProducts();
             UserInterface.DisplayInventory();
             player.Inventory.DisplayCurrentInventory();
             player.DisplayCashFlow();            
             player.BuyInventory();
+            
 
             GoToStore();
             

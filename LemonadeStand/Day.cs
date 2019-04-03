@@ -16,6 +16,7 @@ namespace LemonadeStand
         //constructor
         public Day()
         {
+            Weather = new Weather();
 
         }
 

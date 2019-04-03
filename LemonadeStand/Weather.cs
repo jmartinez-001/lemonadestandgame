@@ -10,7 +10,6 @@ namespace LemonadeStand
         //member variables
         public string ActualWeather;
         public int Temperature;
-        //public int TempRange;
         public int Condition;
         //public Dictionary<int, string> WeatherConditions;
         //public Tuple<int, string> WeatherConditions;
@@ -28,17 +27,30 @@ namespace LemonadeStand
 
 
         //member methods
-        public void GenerateTemp()
+        public void GenerateDailyWeather()
         {
-            Temperature = rnd.Next(70, 100);
-          //  Temperature = TempRange;
+            ActualWeather = ($"{Temperature} and {WeatherConditions[Condition]}");
+          
         }
-        public void GenereateConditions()
+        public void GenerateConditions()
         {
-            //var values = Enum.GetValues(typeof(WeatherConditions));
-            // Condition = values.GetValue(1);
 
-            Condition = rnd.Next(0, 4);
+            Condition = rnd.Next(0, 3);
+            switch (Condition)
+            {
+                case 0:
+                    Temperature = rnd.Next(60, 70);
+                    break;
+                case 1:
+                    Temperature = rnd.Next(70, 80);
+                    break;
+                case 2:
+                    Temperature = rnd.Next(80, 90);
+                    break;
+                default:
+                    break;
+            }
+
 
         }
     }

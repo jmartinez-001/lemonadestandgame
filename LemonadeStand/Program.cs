@@ -12,8 +12,11 @@ namespace LemonadeStand
         {
             
             Game game = new Game();
-            
+
             game.GoToStore();
+            game.day.Weather.GenerateConditions();
+            game.day.Weather.GenerateDailyWeather();
+            Console.WriteLine();
             
             
         }
