@@ -8,7 +8,7 @@ namespace LemonadeStand
     public class Game
     {
         //member variables
-        public Player Player;
+        public Player player;
         public Store Store;
         public List<Day> Day;
 
@@ -16,7 +16,7 @@ namespace LemonadeStand
         public Game()
         {
             Store = new Store();
-            Player = new Player();
+            player = new Player();
             
         }
 
@@ -25,7 +25,20 @@ namespace LemonadeStand
         public void GameSetup()//Prompts the game instructions and objective, Prompts Play Game? (y/n), Prompts how long you would like to play for? (7 days, 14 days, 30 days)
         {
             UserInterface.WelcomeMessage();
+            Console.ReadLine();
+            //GamePlanning();
+            
 
+
+
+
+        }
+        public static void GamePlanning(Player player)
+        {
+            Console.Clear();
+            UserInterface.DisplayInventory();
+            player.Inventory.DisplayCurrentInventory();
+            player.DisplayCashFlow();
 
         }
         public void RunTheMatrix()//Starts simulation, Work from 9-5, generate customers, consume lemonade cups, make lemonade batches, consume ingredients.
@@ -39,13 +52,29 @@ namespace LemonadeStand
             UserInterface.DisplayStore();
             Store.DisplayProducts();
             UserInterface.DisplayInventory();
-            Player.Inventory.DisplayCurrentInventory();
-            Player.CheckCashFlow();
-            Console.ReadLine();
+            player.Inventory.DisplayCurrentInventory();
+            player.DisplayCashFlow();            
+            player.BuyInventory();
+
             GoToStore();
             
 
         }
+        public void CheckWeather()
+        {
 
+        }
+        public void ChangeRecipe()
+        {
+
+        }
+
+        public void Validate(string entry)
+        {
+            
+            
+
+            
+        }
     }
 }

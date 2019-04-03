@@ -8,14 +8,14 @@ namespace LemonadeStand
     public class Store
     {
         //member variables
-        public double Cups;
-        public double PricePerCup;
-        public double Lemons;
-        public double PricePerLemon;
-        public double Sugar;
-        public double PricePerSugarCup;
-        public double Ice;
-        public double PricePerCube;
+        public static double CupsPack;
+        public static double PricePerCup;
+        public static double LemonsPack;
+        public static double PricePerLemon;
+        public static double SugarPack;
+        public static double PricePerSugarCup;
+        public static double IceBag;
+        public static double PricePerCube;
 
         //constructor
         public Store()
@@ -24,6 +24,10 @@ namespace LemonadeStand
             PricePerLemon = .10;
             PricePerSugarCup = .10;
             PricePerCube = .01;
+            CupsPack = 10;
+            LemonsPack = 4;
+            SugarPack = 4;
+            IceBag = 50;
            
             
         }
