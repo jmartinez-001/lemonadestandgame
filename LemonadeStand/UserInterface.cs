@@ -8,7 +8,7 @@ namespace LemonadeStand
     static class UserInterface
     {
         //member variables
-
+        private static int currentNumberOfPrintedLines;
 
         //constructor
 

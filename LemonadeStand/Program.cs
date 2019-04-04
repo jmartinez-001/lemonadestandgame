@@ -13,10 +13,13 @@ namespace LemonadeStand
             
             Game game = new Game();
 
-            game.GoToStore();
+            //game.GoToStore();
             game.day.Weather.GenerateConditions();
             game.day.Weather.GenerateDailyWeather();
-            Console.WriteLine();
+            game.day.Weather.GenerateWeatherFactor();
+            Console.WriteLine(game.day.Weather.ActualWeather);
+            Console.WriteLine(game.day.Weather.WeatherFactor);
+            Console.ReadLine();
             
             
         }
