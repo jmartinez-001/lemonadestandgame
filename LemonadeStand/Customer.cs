@@ -22,6 +22,7 @@ namespace LemonadeStand
         //member methods
         public void PurchasePotential()//Based on Weather or Price being at setpoint. Once decision to buy is made, Thirst will determine how many cups they buy
         {
+
                 
         }
     }

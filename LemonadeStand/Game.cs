@@ -10,8 +10,9 @@ namespace LemonadeStand
         //member variables
         public Player player;
         public Store store;
-        public List<Day> Days;
+        public List<Day> gamePlayDays;
         public Day day;
+
 
         //constructor
         public Game()
@@ -19,6 +20,8 @@ namespace LemonadeStand
             store = new Store();
             player = new Player();
             day = new Day();
+            gamePlayDays = new List<Day>();
+            
 
             
         }
@@ -34,6 +37,25 @@ namespace LemonadeStand
 
 
 
+
+        }
+        public void GameLength()
+        {
+            int gameLength = int.Parse(UserInterface.GetString("How many days would you like to play for?"));
+       
+            for (var i = 0; i < gameLength; i++)
+            {
+                day = new Day();
+                day.Weather.GenerateConditions();
+                day.Weather.GenerateDailyWeather();
+                day.Weather.GenerateWeatherFactor();
+                day.PotentialCustomers();
+                day.CustomerGenerator(); 
+                gamePlayDays.Add(day);
+
+
+
+            }
 
         }
         public static void GamePlanning(Player player)

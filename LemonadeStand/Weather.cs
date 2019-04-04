@@ -61,7 +61,7 @@ namespace LemonadeStand
             {
                 GenerateConditions();
                 GenerateDailyWeather();
-                WeekForecast = WeekForecast.Concat(new string[] { ActualWeather }).ToArray();
+                WeekForecast[i] = ActualWeather;
             }
         }
         public void GenerateWeatherFactor()
