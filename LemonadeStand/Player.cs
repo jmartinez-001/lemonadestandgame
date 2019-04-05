@@ -33,6 +33,11 @@ namespace LemonadeStand
         public Inventory Inventory;
         public string item;
         public string orderquantity;
+        public int LemonsPerBatch;
+        public int SugarPerBatch;
+        public int CupsPerBatch;
+        public int IceCubesPerCup;
+        public double PricePerCup;
 
 
 

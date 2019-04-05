@@ -11,7 +11,9 @@ namespace LemonadeStand
         public Player player;
         public Store store;
         public List<Day> gamePlayDays;
-        public Day day;
+        //public Day day;
+        public static Random rnd;
+
 
 
         //constructor
@@ -19,11 +21,12 @@ namespace LemonadeStand
         {
             store = new Store();
             player = new Player();
-            day = new Day();
+            //day = new Day();
             gamePlayDays = new List<Day>();
-            
+            rnd = new Random();
 
-            
+
+
         }
 
         
@@ -45,17 +48,19 @@ namespace LemonadeStand
        
             for (var i = 0; i < gameLength; i++)
             {
-                day = new Day();
+                Day day = new Day();
                 day.Weather.GenerateConditions();
                 day.Weather.GenerateDailyWeather();
                 day.Weather.GenerateWeatherFactor();
                 day.PotentialCustomers();
-                day.CustomerGenerator(); 
+                day.CustomerGenerator();
                 gamePlayDays.Add(day);
 
-
-
             }
+
+        }
+        public void CreateDay()
+        {
 
         }
         public static void GamePlanning(Player player)

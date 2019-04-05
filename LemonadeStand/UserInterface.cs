@@ -46,11 +46,6 @@ namespace LemonadeStand
             Console.WriteLine("\t Current Inventory:");
 
         }
-        public static void SellItem(string choice)
-        {
-            Console.WriteLine($"How many packs of {choice} would you like to purchase?");
-
-        }
         public static void ClearLine()
         {
             Console.SetCursorPosition(0, Console.CursorTop - 1);

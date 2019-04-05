@@ -22,12 +22,7 @@ namespace LemonadeStand
             //game.day.CustomerGenerator();
             //game.day.Weather.GenerateWeekForecast();
             game.GameLength();
-            Console.ReadLine();
-
-            Console.WriteLine(game.day.Weather.ActualWeather);
-            Console.WriteLine(game.day.Weather.WeatherFactor);
-            Console.ReadLine();
-            
+            Console.ReadLine();           
             
         }
     }

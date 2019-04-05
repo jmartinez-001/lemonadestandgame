@@ -16,7 +16,6 @@ namespace LemonadeStand
         //public Tuple<int, string> WeatherConditions;
         public string[] WeatherConditions;
         public string[] WeekForecast;
-        Random rnd = new Random();
 
 
         //constructor
@@ -32,17 +31,17 @@ namespace LemonadeStand
         public void GenerateConditions()
         {
 
-            Condition = rnd.Next(0, 3);
+            Condition = Game.rnd.Next(0, 3);
             switch (Condition)
             {
                 case 0:
-                    Temperature = rnd.Next(60, 70);
+                    Temperature = Game.rnd.Next(60, 70);
                     break;
                 case 1:
-                    Temperature = rnd.Next(70, 80);
+                    Temperature = Game.rnd.Next(70, 80);
                     break;
                 case 2:
-                    Temperature = rnd.Next(80, 90);
+                    Temperature = Game.rnd.Next(80, 90);
                     break;
                 default:
                     break;
