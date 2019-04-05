@@ -35,7 +35,8 @@ namespace LemonadeStand
         {
             UserInterface.WelcomeMessage();
             Console.ReadLine();
-            //GamePlanning();
+            GameLength();
+            UserInterface.Menu(player, store);
             
 
 
@@ -63,40 +64,38 @@ namespace LemonadeStand
         {
 
         }
-        public static void GamePlanning(Player player)
-        {
-            Console.Clear();
-            UserInterface.DisplayInventory();
-            player.Inventory.DisplayCurrentInventory();
-            player.DisplayCashFlow();
-
-        }
+        
         public void RunTheMatrix()//Starts simulation, Work from 9-5, generate customers, consume lemonade cups, make lemonade batches, consume ingredients.
         {
 
         }
-        public void GoToStore()   
-        {
+        //public void GoToStore()   
+        //{
 
-            Console.Clear();
-            UserInterface.DisplayStore();
-            store.DisplayProducts();
-            UserInterface.DisplayInventory();
-            player.Inventory.DisplayCurrentInventory();
-            player.DisplayCashFlow();            
-            player.BuyInventory();
+        //    Console.Clear();
+        //    UserInterface.DisplayStore();
+        //    store.DisplayProducts();
+        //    UserInterface.DisplayInventory();
+        //    player.Inventory.DisplayCurrentInventory();
+        //    player.DisplayCashFlow();            
+        //    player.BuyInventory();
             
 
-            GoToStore();
+        //    GoToStore();
             
 
-        }
+        //}
         public void CheckWeather()
         {
 
         }
         public void ChangeRecipe()
         {
+
+            Console.Clear();
+            UserInterface.DisplayRecipe();
+            player.SetRecipe(store);
+            ChangeRecipe();
 
         }
 

@@ -38,5 +38,20 @@ namespace LemonadeStand
             Console.WriteLine($"\t Cups / 10 pack : {(PricePerCup * 10).ToString("C")} \n\t Lemons / 4 pack : {(PricePerLemon * 4).ToString("C")} \n\t Sugar / 4 cups : {(PricePerSugarCup * 4).ToString("C")} \n\t Ice cubes / bag of 50 : {(PricePerCube * 50).ToString("C")} \n");
 
         }
+
+        public void SellItems(Player player)
+        {
+
+            Console.Clear();
+            UserInterface.DisplayStore();
+            DisplayProducts();
+            UserInterface.DisplayInventory();
+            player.Inventory.DisplayCurrentInventory();
+            player.DisplayCashFlow();
+            player.BuyInventory(this);
+            SellItems(player);
+
+
+        }
     }
 }
