@@ -14,11 +14,9 @@ namespace LemonadeStand
             
             Game game = new Game();
 
-            //game.GoToStore();
-
-            //game.ChangeRecipe();
+            
             game.GameSetup();
-            Console.ReadLine();           
+            
             
         }
     }

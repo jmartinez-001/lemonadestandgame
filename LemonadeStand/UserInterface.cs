@@ -8,11 +8,8 @@ namespace LemonadeStand
     static class UserInterface
     {
         //member variables
-        //private static int currentNumberOfPrintedLines;
 
         //constructor
-
-
 
         //member methods
 
@@ -21,6 +18,13 @@ namespace LemonadeStand
             Console.WriteLine(input);
             var result = Console.ReadLine();
             return result;
+        }
+        public static void DisplayBanner(Player player)
+        {
+            DisplayInventory();
+            player.Inventory.DisplayCurrentInventory();
+            player.DisplayCashFlow();
+
         }
         public static void Menu(Player player, Store store)
         {
@@ -59,8 +63,14 @@ namespace LemonadeStand
         }
         public static void WelcomeMessage()
         {
-            Console.WriteLine("Welcome... to Lemonade Stand Park!(Cue Jurassic Park Music). \nYour Mission, should you choose to accept it, will test \nyour business savy and decision making skills. Your objective \nis to make a profit in a specified length of time. \nYou will have all the tools you need at your disposal. \nLie, cheat or steal; but as always, \nshould any of your IM Force be caught or killed, \nthe Secretary will disavow any knowledge of your actions. \nThis computer will self-destruct in ten seconds. \nGood luck.");
-            Console.WriteLine("Do you want to play? (y/n)");
+            Console.WriteLine("\t---------------Welcome to Lemonade Stand--------------- \n" +
+                "-----Here is how the game will be played. You are a lemonade stand owner,-----\n" +
+                "-----responsible for purchasing inventory and selling lemonade. Prior to------\n" +
+                "-----every day, you will need to purchase stock and set your day's recipe.----\n" +
+                "-----After a work day you will need to restock and check your sales. if-------\n" +
+                "-----sales are low, you might need to adjust your recipe. Dont forget to------\n" +
+                "-----check on the weather forecast regularly. You dont want to run out of-----\n" +
+                "-----lemonade for thirsty customers.\n");
             
         }
         public static void DisplayStore()

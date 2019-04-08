@@ -11,6 +11,8 @@ namespace LemonadeStand
         public Player player;
         public Store store;
         public List<Day> gamePlayDays;
+        public int CurrentDay;
+        public List<string> weekForecast;
         //public Day day;
         public static Random rnd;
 
@@ -23,6 +25,7 @@ namespace LemonadeStand
             player = new Player();
             //day = new Day();
             gamePlayDays = new List<Day>();
+            weekForecast = new List<string>();
             rnd = new Random();
 
 
@@ -34,7 +37,7 @@ namespace LemonadeStand
         public void GameSetup()//Prompts the game instructions and objective, Prompts Play Game? (y/n), Prompts how long you would like to play for? (7 days, 14 days, 30 days)
         {
             UserInterface.WelcomeMessage();
-            Console.ReadLine();
+            UserInterface.GetString("\t-----Do you want to Play?(y/n)-----");
             GameLength();
             UserInterface.Menu(player, store);
             
@@ -60,7 +63,15 @@ namespace LemonadeStand
             }
 
         }
-        public void CreateDay()
+        public void WeekForecast()
+        {
+            int week = 7;
+            for (var i = 0; i < week; i++)
+            {
+                //weekForecast.Add(CurrentDay);
+            }
+        }
+        public void CreateDay()//method will have a for loop that loops created list of days to play within those contstraints and customers.
         {
 
         }
@@ -69,23 +80,8 @@ namespace LemonadeStand
         {
 
         }
-        //public void GoToStore()   
-        //{
-
-        //    Console.Clear();
-        //    UserInterface.DisplayStore();
-        //    store.DisplayProducts();
-        //    UserInterface.DisplayInventory();
-        //    player.Inventory.DisplayCurrentInventory();
-        //    player.DisplayCashFlow();            
-        //    player.BuyInventory();
-            
-
-        //    GoToStore();
-            
-
-        //}
-        public void CheckWeather()
+        
+        public void CheckWeather()//Display a 7 day forecast
         {
 
         }

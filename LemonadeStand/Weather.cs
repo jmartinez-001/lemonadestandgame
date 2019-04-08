@@ -12,8 +12,6 @@ namespace LemonadeStand
         public int WeatherFactor;
         public int Temperature;
         public int Condition;
-        //public Dictionary<int, string> WeatherConditions;
-        //public Tuple<int, string> WeatherConditions;
         public string[] WeatherConditions;
         public string[] WeekForecast;
 
@@ -21,7 +19,7 @@ namespace LemonadeStand
         //constructor
         public Weather()
         {
-            WeatherConditions = new string[] { "Rainy", "Cloudy", "Sunny" };
+            WeatherConditions = new string[] { "Rainy", "Cloudy", "Sunny", "Scorcher" };
             WeekForecast = new string[7];
 
         }
@@ -31,7 +29,7 @@ namespace LemonadeStand
         public void GenerateConditions()
         {
 
-            Condition = Game.rnd.Next(0, 3);
+            Condition = Game.rnd.Next(0, 4);
             switch (Condition)
             {
                 case 0:
@@ -42,6 +40,9 @@ namespace LemonadeStand
                     break;
                 case 2:
                     Temperature = Game.rnd.Next(80, 90);
+                    break;
+                case 3:
+                    Temperature = Game.rnd.Next(90, 100);
                     break;
                 default:
                     break;

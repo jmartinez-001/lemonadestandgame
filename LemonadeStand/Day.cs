@@ -19,15 +19,10 @@ namespace LemonadeStand
         //constructor
         public Day()
         {
-            Weather = new Weather();
-            //for (int i = currentDay; i < gamePlayDays.Length; i++)
-            
+            Weather = new Weather();            
             customer = new Customer();
             customerArray = new List<Customer> { };
-
             
-
-
         }
 
 
@@ -42,8 +37,6 @@ namespace LemonadeStand
             {
                 customer = new Customer();
                 customerArray.Add(customer);
-
-
 
             }
         }
